@@ -13,7 +13,9 @@ function playRound(e) {
   if (weapons.indexOf(choice) > -1) {
     var computerChoice = computerSelection();
     declareWinner(choice,computerChoice);
-  } 
+  } else if (choice === "reset") {
+    reset();
+  }
 }
 
 function declareWinner(player1, player2) {
@@ -35,6 +37,15 @@ function updateCount(num) {
 
 function setExplanation(player1, player2) {
   return "You chose " + player1 + ". // The computer chose " + player2 + ".";
+}
+
+function reset() {
+  explanation.innerText = "";
+  result.innerText = "";
+  wins = 0;
+  losses = 0;
+  winCount.innerText = '0';
+  loseCount.innerText = '0';
 }
 
 window.onload = function() {
