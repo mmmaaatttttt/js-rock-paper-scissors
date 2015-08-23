@@ -12,3 +12,7 @@ img:hover {
 #explanation {
   margin-top: 10px;
 }
+
+.well h2 {
+  margin-top: 0;
+}
